@@ -1,0 +1,10 @@
+@import '~static/css/variable.scss';
+@import '~static/css/mixin.scss';
+
+.test {
+  color: $color-text-blue;
+}
+
+.testLoading {
+  @include loading(30px, green);
+}
