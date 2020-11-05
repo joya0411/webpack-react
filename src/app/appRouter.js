@@ -10,9 +10,9 @@ import enUS from 'language/en';
 import zhCN from 'language/zh';
 
 // 页面
-import Login from 'pages/login';
-import TodoList from 'pages/todoList';
-import NoFound from 'pages/noFound';
+const Login = React.lazy(() => import('pages/login'));
+const TodoList = React.lazy(() => import('pages/todoList'));
+const NotFound = React.lazy(() => import('pages/noFound'));
 import Loading from 'components/Loading';
 
 const AppRouter = (props) => {
