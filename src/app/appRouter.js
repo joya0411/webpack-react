@@ -12,7 +12,7 @@ import zhCN from 'language/zh';
 // 页面
 const Login = React.lazy(() => import('pages/login'));
 const TodoList = React.lazy(() => import('pages/todoList'));
-const NotFound = React.lazy(() => import('pages/noFound'));
+const NoFound = React.lazy(() => import('pages/noFound'));
 import Loading from 'components/Loading';
 
 const AppRouter = (props) => {
@@ -46,10 +46,12 @@ const AppRouter = (props) => {
               <Link to='/'>Home</Link>
               <span style={{paddingLeft: 10, paddingRight: 10}}></span>
               <Link to='/todoList'>todoList</Link>
+              <span style={{paddingLeft: 10, paddingRight: 10}}></span>
+              <Link to='/abc'>noFound</Link>
             </div>
           </header>
           <hr />
-          <Suspense fallback={Loading}>
+          <Suspense fallback={<Loading />}>
             <Switch>
               <Route path={['/', '/index', '/home']} exact component={Login} />
               <Route path='/todoList' component={TodoList} />

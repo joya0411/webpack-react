@@ -1,1 +1,7 @@
-export default from './NoFound';
+import React from 'react';
+
+const NotFound = () => {
+  return <div>NoFound</div>;
+};
+
+export default NotFound;
